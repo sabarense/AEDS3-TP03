@@ -6,14 +6,34 @@ Terceiro trabalho prático da disciplina de Algoritmos e Estruturas de Dados III
 O trabalho consiste em implementar um sistema de backups de arquivos que utiliza o algoritmo LZW para compactação e descompactação dos arquivos. O sistema deve permitir que o usuário escolha a versão do arquivo a ser recuperada
 ### 2. Dificuldades ###
 Tivemos um pouco de dificuldade na implementação do backups dos arquivos, porém conseguimos resolver após algumas tentativas. 
-### 3. Classes e Métodos ###
-    public static byte[] decodifica(byte[] msgCodificada): Recebe um array de bytes codificados, decodifica usando o algoritmo LZW e retorna o array de bytes original.
+### 3. Métodos ###
 
-    public static byte[] codifica(byte[] msgOriginal): Recebe um array de bytes original, codifica usando o algoritmo LZW e retorna o array de bytes codificado.
+    public static void listarBackups()
+    Lista todos os backups disponíveis no diretório de backups e permite ao usuário escolher um para recuperar.
 
-    public static void criarBackup(String caminhoArquivo): Recebe o caminho do arquivo a ser feito o backups, compacta o arquivo e salva o arquivo compactado no mesmo diretório do arquivo original.
-
-    public static byte[] recuperarBackup(String caminhoArquivo): Recebe o caminho do arquivo compactado, descompacta o arquivo e retorna o array de bytes original.
+    public static boolean recuperarBackup(File path)
+    Recupera um backup a partir do caminho especificado, substituindo os dados atuais pelos do backup e excluindo os arquivos existentes antes de restaurar os novos.
+    
+    public static boolean criarBackup(File pastaBackup)
+    Cria um backup dos arquivos de dados no diretório especificado, compactando-os usando o algoritmo LZW.
+    
+    private static void escreverBackup(String arquivo, String origem, String destino) throws Exception
+    Lê um arquivo do diretório de origem, codifica os dados usando LZW, e escreve o arquivo codificado no diretório de destino.
+    
+    private static void escreverRecuperacao(String arquivo, String origem, String destino) throws Exception
+    Lê um arquivo codificado do diretório de origem, decodifica os dados usando LZW, e escreve o arquivo decodificado no diretório de destino.
+    
+    private static byte[] lerArquivo(String caminho) throws Exception
+    Lê um arquivo do caminho especificado e retorna seu conteúdo como um array de bytes.
+    
+    private static void escreverArquivo(byte[] byteArray, String caminho) throws Exception
+    Escreve um array de bytes no caminho especificado.
+    
+    public static void excluirPasta(File pasta)
+    Exclui uma pasta e todos os seus arquivos e subdiretórios.
+    
+    public static void excluirArquivos(File pasta)
+    Exclui todos os arquivos e subdiretórios dentro de uma pasta especificada.
 
 ### 4. Checklist ###
 
