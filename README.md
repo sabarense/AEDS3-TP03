@@ -23,7 +23,7 @@ Tivemos um pouco de dificuldade na implementação do backups dos arquivos, por�
 Sim, há uma rotina de descompactação usando o algoritmo LZW para recuperação dos arquivos.
 - O usuário pode escolher a versão a recuperar? 
 Sim, o usuário pode escolher a versão a recuperar.
-- Qual foi a taxa de compressão alcançada por esse backups? (Compare o tamanho dos arquivos compactados com os arquivos originais) 
+- Qual foi a taxa de compressão alcançada por esse backups? 1.5 - 1.7
 - O trabalho está funcionando corretamente? Sim, o trabalho está funcionando corretamente.
 - O trabalho está completo? Sim, o trabalho está completo.
 - O trabalho é original e não a cópia de um trabalho de um colega? Sim, o trabalho é original e desenvolvido por Lívia Câmara, Sophia Carrazza e Yan Sabarense.
